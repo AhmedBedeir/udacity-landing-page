@@ -40,6 +40,7 @@ function scrollToTop() {
 }
 // Add scroll to section
 navbarList.addEventListener('click', (e) => {
+  e.preventDefault();
   if (e.target.dataset.nav) {
     document
       .getElementById(`${e.target.dataset.nav}`)
