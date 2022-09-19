@@ -23,5 +23,18 @@ window.onscroll = () => {
       link.classList.remove('active_link');
     }
   });
+  whenToScroll();
 };
 // Add scroll to top
+function whenToScroll() {
+  const btnScroll = document.querySelector('.btn');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnScroll.style.display = 'block';
+  } else {
+    btnScroll.style.display = 'none';
+  }
+}
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
