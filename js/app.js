@@ -7,7 +7,7 @@ document.querySelectorAll('section').forEach((elm) => {
 const navbarList = document.getElementById('navbar__list');
 sections.forEach((elm) => {
   const li = document.createElement('li');
-  li.innerHTML = `<a href = "#${elm.id}" class = "menu__link">${elm.dataset.nav}</a>`;
+  li.innerHTML = `<a href = "#${elm.id}" data-nav= "${elm.id}" class = "menu__link">${elm.dataset.nav}</a>`;
   navbarList.appendChild(li);
 });
 // Add class 'active' to section when near top of viewport
@@ -38,3 +38,11 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Add scroll to section
+navbarList.addEventListener('click', (e) => {
+  if (e.target.dataset.nav) {
+    document
+      .getElementById(`${e.target.dataset.nav}`)
+      .scrollIntoView({ behavior: 'smooth' });
+  }
+});
