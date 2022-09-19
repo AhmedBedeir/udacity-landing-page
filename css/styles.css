@@ -28,13 +28,14 @@ body {
 h1 {
   font-family: 'Fira Sans', sans-serif;
   font-size: 3em;
-  margin: 2em 1rem;
+  margin: 3em 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 35em) {
   h1 {
     font-size: 7em;
-    margin: 2em 4rem 1em;
+    margin: 3em 4rem 2em;
   }
 }
 
@@ -71,7 +72,7 @@ section {
 .navbar__menu ul {
   padding-left: 0;
   margin: 0;
-  text-align: right;
+  text-align: center;
 }
 
 .navbar__menu li {
@@ -92,7 +93,7 @@ section {
   transition: ease 0.3s all;
 }
 .active_link {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(179, 179, 179);
 }
 /* Header Styles */
 .page__header {
